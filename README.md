@@ -1,4 +1,4 @@
-# GCP_Hive_BigData
+# Working with Big Data & Tables on GCP using Hadoop & Hive
 
 Analyzing data of over a billion rows using Hadoop with Apache Hive on Google Cloud Platform (GCP)
 
@@ -13,14 +13,16 @@ So first I create a dataproc cluster with 2 worker nodes. Each worker node conta
 Now, let's connect to the Master node VM via SSH. By default, the Master node is created with a public IP address and is accessible via Secure Shell (SSH) for remote access and management. -
 
 ## The Data 
-In this repository, I have the dataset that I'll be using for this project. It's about consumers and their details like age, gender, country, salaries etc. (At a later point, I'll perform a transformation that finds average salary figure for each coutry) 
+In this repository, I have the dataset that I'll be using for this project. It's about consumers and their details like age, gender, country, salaries etc. (At a later point, I'll perform a transformation that finds average salary figure for each country) 
+<img width="261" alt="0_data" src="https://user-images.githubusercontent.com/71979171/228745950-a1ee2d24-ae5a-4d5f-b52c-1775fb683716.PNG">
+
 The dataset has over 5 Million records (rows) & is stored in a zip file. I'll use the url of this data on the SSH with the command **wget** to load it into HDFS.
 
 
 <img width="945" alt="2_ssh" src="https://user-images.githubusercontent.com/71979171/228710704-2a6bb08d-624e-44e3-9c8a-d8b4b7b45f5c.PNG">
 
 
-I'll unzip the file & copy the data (with 5 million rows x) 200 times to generate a combined data of over 1 billion records.
+I'll unzip the file & copy the data (with 5 million rows x) 200 times to generate a combined data of **over 1 billion records**.
 Then, I'll put all the 200 files into the Hadoop Distributed File System (HDFS) and proceed to Hive.
 Using Hive, let's create a database & a table for our data -
 
