@@ -1,4 +1,4 @@
-# Working with Big Data & Tables on GCP using Hadoop & Hive
+# Working with Big Data & Tables on GCP using Hadoop & Apache Hive
 
 Analyzing data of over a billion rows using Hadoop with Apache Hive on Google Cloud Platform (GCP)
 
@@ -39,3 +39,6 @@ It can be seen that 40 Mappers & over 1000 Reducers have been assigned to proces
 Finally, we have a CountrySalaries Table which has average salary for each country -
 
 <img width="649" alt="5_Result" src="https://user-images.githubusercontent.com/71979171/228745390-a6e1dec1-0e32-4334-aef5-102c7142c2f1.PNG">
+
+
+This table can be later used for reporting, analytics through BI tools.
