@@ -37,7 +37,7 @@ Now, I'll perform a simple aggregation transformation of taking salary of each c
 
 It can be seen that 40 Mappers & over 1000 Reducers have been assigned to process this operation. Naturally, over 95% of elapsed time is consumed during the Map task!
 
-Further, the table can be easily **partitioned** (on country column in this case) to improve hive query performance significantly.
+Further, techniques like **partitioning** (on country column in this case) and **bucketing** can be used to improve hive query performance significantly.
 
 
 <img width="936" alt="4_Mapper" src="https://user-images.githubusercontent.com/71979171/228743964-69028835-17ea-4585-b6f6-6341a1af5d22.PNG">
@@ -58,4 +58,9 @@ Finally, we have a CountrySalaries Table which has average salary for each count
 
 
 
-This table can be later used for reporting, analytics through BI tools.
+This table can be later used for functions like **reporting or analytics through BI tools**.
+
+As mentioned earlier, query optimization can be done easily using Partioning & Bucketing.
+**Partitioning** is used to divide a table into smaller parts based on specific column values, while **bucketing** is used to group data into evenly distributed, smaller files based on a hash function applied to specific columns.
+Partitioning can greatly improve query performance by allowing Hive to skip over entire partitions that do not need to be queried. Bucketing can reduce the amount of data that needs to be read from disk and improve data locality when used with certain file formats and storage systems.
+Both techniques can be used together for even better performance optimization.
