@@ -36,6 +36,10 @@ Using Hive, let's create a database & a table for our data -
 Now, I'll perform a simple aggregation transformation of taking salary of each consumer from this table, finding out average salary for each country, ans storing the result in a new table. 
 
 It can be seen that 40 Mappers & over 1000 Reducers have been assigned to process this operation. Naturally, over 95% of elapsed time is consumed during the Map task!
+
+Further, the table can be easily **partitioned** (on country column in this case) to improve hive query performance significantly.
+
+
 <img width="936" alt="4_Mapper" src="https://user-images.githubusercontent.com/71979171/228743964-69028835-17ea-4585-b6f6-6341a1af5d22.PNG">
 
 
